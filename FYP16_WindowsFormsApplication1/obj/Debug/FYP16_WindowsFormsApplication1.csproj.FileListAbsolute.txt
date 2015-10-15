@@ -1,0 +1,9 @@
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\bin\Debug\FYP16_WindowsFormsApplication1.exe.config
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\bin\Debug\FYP16_WindowsFormsApplication1.exe
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\bin\Debug\FYP16_WindowsFormsApplication1.pdb
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.Form1.resources
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.Properties.Resources.resources
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.csproj.GenerateResource.Cache
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.exe
+c:\users\kenpoon\documents\visual studio 2013\Projects\FYP16_WindowsFormsApplication1\FYP16_WindowsFormsApplication1\obj\Debug\FYP16_WindowsFormsApplication1.pdb
