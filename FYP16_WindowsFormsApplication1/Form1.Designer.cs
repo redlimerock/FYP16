@@ -84,7 +84,10 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Laplacian 3x3"});
+            "None",
+            "Laplacian 3x3",
+            "Laplacian 3x3 Grayscale",
+            "Laplacian Of Gaussian"});
             this.comboBox1.Location = new System.Drawing.Point(126, 567);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(980, 21);

@@ -16,7 +16,7 @@ namespace FYP16_WindowsFormsApplication1
 {
     public static class extBitmap
     {
-        public static Bitmap CopyToSquareCanvas(this Bitmap sourceBitmap, int canvasWidthLength)
+        public static Bitmap CopyToThisCanvas(this Bitmap sourceBitmap, int canvasWidthLength)
         {
             float ratio = 1.0f;
             int maxSide = sourceBitmap.Width > sourceBitmap.Height ?
@@ -24,26 +24,26 @@ namespace FYP16_WindowsFormsApplication1
 
             ratio = (float)maxSide / (float)canvasWidthLength;
 
-            Bitmap bitmapResult = (sourceBitmap.Width > sourceBitmap.Height ?
+            Bitmap bitmapPic = (sourceBitmap.Width > sourceBitmap.Height ?
                                     new Bitmap(canvasWidthLength, (int)(sourceBitmap.Height / ratio))
                                     : new Bitmap((int)(sourceBitmap.Width / ratio), canvasWidthLength));
 
-            using (Graphics graphicsResult = Graphics.FromImage(bitmapResult))
+            using (Graphics graphicsPic = Graphics.FromImage(bitmapPic))
             {
-                graphicsResult.CompositingQuality = CompositingQuality.HighQuality;
-                graphicsResult.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                graphicsResult.PixelOffsetMode = PixelOffsetMode.HighQuality;
+                graphicsPic.CompositingQuality = CompositingQuality.HighQuality;
+                graphicsPic.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphicsPic.PixelOffsetMode = PixelOffsetMode.HighQuality;
 
-                graphicsResult.DrawImage(sourceBitmap,
+                graphicsPic.DrawImage(sourceBitmap,
                                         new Rectangle(0, 0,
-                                            bitmapResult.Width, bitmapResult.Height),
+                                            bitmapPic.Width, bitmapPic.Height),
                                         new Rectangle(0, 0,
                                             sourceBitmap.Width, sourceBitmap.Height),
                                             GraphicsUnit.Pixel);
-                graphicsResult.Flush();
+                graphicsPic.Flush();
             }
 
-            return bitmapResult;
+            return bitmapPic;
         }
 
         private static Bitmap ConvolutionFilter(Bitmap sourceBitmap,
@@ -318,6 +318,13 @@ namespace FYP16_WindowsFormsApplication1
         {
             Bitmap resultBitmap = extBitmap.ConvolutionFilter(sourceBitmap,
                                     Matrix.Laplacian3x3, 1.0, 0, grayscale);
+
+            return resultBitmap;
+        }
+        public static Bitmap LaplacianOfGaussianFilter(this Bitmap sourceBitmap)
+        {
+            Bitmap resultBitmap = extBitmap.ConvolutionFilter(sourceBitmap,
+                                  Matrix.LaplacianOfGaussian, 1.0, 0, true);
 
             return resultBitmap;
         }

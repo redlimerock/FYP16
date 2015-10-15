@@ -43,7 +43,7 @@ namespace FYP16_WindowsFormsApplication1
                 originalBitmap = (Bitmap)Bitmap.FromStream(streamReader.BaseStream);
                 streamReader.Close();
 
-                previewBitmap = originalBitmap.CopyToSquareCanvas(pictureBox1.Width);
+                previewBitmap = originalBitmap.CopyToThisCanvas(pictureBox1.Width);
                 pictureBox1.Image = previewBitmap;
 
                 ApplyFilter(true);
@@ -91,10 +91,10 @@ namespace FYP16_WindowsFormsApplication1
                     {
                         imgFormat = ImageFormat.Icon;
                     }
-                    else if (fileExtension == "SVG")
-                    {
-                        imgFormat = ImageFormat.Svg;
-                    }
+                    ///else if (fileExtension == "SVG")
+                    ///{
+                    ///    imgFormat = ImageFormat.Svg;
+                    ///}
 
                     StreamWriter streamWriter = new StreamWriter(svfd.FileName, false);
                     resultBitmap.Save(streamWriter.BaseStream, imgFormat);
@@ -107,7 +107,7 @@ namespace FYP16_WindowsFormsApplication1
         }
 
         /// <summary>
-        /// Options
+        /// Image Filter Options
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -143,6 +143,14 @@ namespace FYP16_WindowsFormsApplication1
                 else if (comboBox1.SelectedItem.ToString() == "Laplacian 3x3")
                 {
                     bitmapResult = selectedSource.Laplacian3x3Filter(false);
+                }
+                else if (comboBox1.SelectedItem.ToString() == "Laplacian 3x3 Grayscale")
+                {
+                    bitmapResult = selectedSource.Laplacian3x3Filter(true);
+                }
+                else if (comboBox1.SelectedItem.ToString() == "Laplacian of Gaussian")
+                {
+                    bitmapResult = selectedSource.LaplacianOfGaussianFilter();
                 }
             }
 
