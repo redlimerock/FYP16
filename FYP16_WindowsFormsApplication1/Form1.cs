@@ -63,7 +63,7 @@ namespace FYP16_WindowsFormsApplication1
                 SaveFileDialog svfd = new SaveFileDialog();
                 svfd.Title = "Specify a file name and file path";
                 svfd.Filter = "Png Images(*.png)|*.png|Jpeg Images(*.jpg)|*.jpg|Tiff images(*.tiff)|*.tiff";
-                svfd.Filter += "|Bitmap Images(*.bmp)|*.bmp|Svg Images(*.svg)|*.svg";
+                svfd.Filter += "|Bitmap Images(*.bmp)|*.bmp|SVG Images(*.svg)|*.svg";
 
 
                 if (svfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
